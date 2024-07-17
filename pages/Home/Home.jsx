@@ -13,6 +13,7 @@ import { getWeatherInterpretation } from "../../services/meteo-service";
 export default function Home() {
   const [coords, setCoords] = useState();
   const [weather, setWeather] = useState();
+  const [city, setCity] = useState();
 
   const currentWeather = weather?.current_weather;
 
@@ -23,6 +24,7 @@ export default function Home() {
   useEffect(() => {
     if (coords) {
       fetchWeather(coords);
+      fetchCity(coords);
     }
   }, [coords]);
 
@@ -43,6 +45,10 @@ export default function Home() {
     const weatherResponse = await MeteoAPI.fetchWeatherFromCoords(coordinates);
     setWeather(weatherResponse);
   }
+  async function fetchCity(coordinates) {
+    const cityResponse = await MeteoAPI.fetchCityFromCoords(coordinates);
+    setCity(cityResponse);
+  }
 
   // console.log(weather);
   return currentWeather ? (
@@ -50,7 +56,7 @@ export default function Home() {
       <View style={s.meteo_basic}>
         <MeteoBasic
           temperature={Math.round(currentWeather?.temperature)}
-          city="Todo"
+          city={city}
           interpretation={getWeatherInterpretation(currentWeather.weathercode)}
         />
       </View>
