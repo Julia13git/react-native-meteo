@@ -17,5 +17,10 @@ const s = StyleSheet.create({
   date: {
     fontSize: 20,
   },
+  temperature: {
+    width: 60,
+    fontSize: 25,
+    textAlign: "right",
+  },
 });
 export { s };
