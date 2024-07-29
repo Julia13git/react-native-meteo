@@ -19,7 +19,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "softwareKeyboardLayoutMode": "pan"
+      "softwareKeyboardLayoutMode": "pan",
+      "package": "com.yuliia13.meteo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -29,6 +30,12 @@
         "projectId": "16bdd962-bdbf-4f32-8ddb-5aaed4260d2f"
       }
     },
-    "owner": "yuliia13"
+    "owner": "yuliia13",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/16bdd962-bdbf-4f32-8ddb-5aaed4260d2f"
+    }
   }
 }
