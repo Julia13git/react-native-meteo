@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "react-native-meteo",
-    "slug": "react-native-meteo",
+    "slug": "meteo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,6 +23,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "16bdd962-bdbf-4f32-8ddb-5aaed4260d2f"
+      }
+    },
+    "owner": "yuliia13"
   }
 }
